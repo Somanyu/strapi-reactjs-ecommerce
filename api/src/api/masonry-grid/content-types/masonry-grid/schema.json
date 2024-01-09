@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "masonry_grids",
+  "info": {
+    "singularName": "masonry-grid",
+    "pluralName": "masonry-grids",
+    "displayName": "Masonry grid"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}

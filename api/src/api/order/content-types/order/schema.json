@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Paid",
+        "Unpaid",
+        "Refund"
+      ],
+      "required": false,
+      "default": "Unpaid"
+    },
+    "total": {
+      "type": "decimal",
+      "required": true
+    },
+    "stripe_checkout_session": {
+      "type": "string"
+    },
+    "tracking_id": {
+      "type": "string",
+      "default": "Tracking ID will be issued soon."
+    },
+    "deliveryStatus": {
+      "type": "enumeration",
+      "enum": [
+        "Delivered",
+        "Pending",
+        "Return"
+      ],
+      "default": "Pending"
+    },
+    "shipping_address": {
+      "type": "json"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "order_metadata": {
+      "type": "json"
+    },
+    "hosted_invoice_url": {
+      "type": "string"
+    },
+    "invoice_pdf": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "orders"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "orders"
+    }
+  }
+}
