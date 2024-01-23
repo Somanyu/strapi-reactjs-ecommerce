@@ -96,7 +96,7 @@ const Product = () => {
                     <span className="bg-blue-100 text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-blue-400 border border-blue-400">{data?.attributes?.subcategories?.data[0].attributes.title}</span>
                   </div>
                   <div className='flex'>
-                    <h1 className="font-bold text-3xl text-gray-900 font-dynaPuff sm:text-3xl">{data?.attributes?.title}</h1>
+                    <h1 className="font-bold text-3xl text-gray-900 font-primary sm:text-3xl">{data?.attributes?.title}</h1>
                     <div className="ml-2 -mt-[0.5rem] bg-red-500/80 rounded-full">
                       <input onClick={() => handleWishlist({ id: data?.id, title: data?.attributes?.title, desc: data?.attributes?.description, price: data?.attributes?.price, img: data?.attributes?.image?.data?.attributes?.url })} type="checkbox" className="checkbox" id="checkbox" />
                       <label htmlFor="checkbox">
@@ -168,14 +168,14 @@ const Product = () => {
 
 
                   <div className="flex items-end mt-8">
-                    <h1 className="text-4xl font-fredoka font-semibold">${data?.attributes?.price}</h1>
-                    <h1 className="text-3xl mx-2 font-fredoka line-through text-gray-500">${data?.attributes?.price + 20}</h1>
+                    <h1 className="text-4xl font-secondary font-semibold">${data?.attributes?.price}</h1>
+                    <h1 className="text-3xl mx-2 font-secondary line-through text-gray-500">${data?.attributes?.price + 20}</h1>
                   </div>
-                  <span className="text-base font-fredoka">per piece</span>
+                  <span className="text-base font-secondary">per piece</span>
 
 
-                  <h2 className="mb-2 mt-8 font-dynaPuff text-lg font-semibold text-gray-900 dark:text-white">Features</h2>
-                  <ul className="max-w-md space-y-1 font-fredoka text-gray-500 list-disc list-inside dark:text-gray-400">
+                  <h2 className="mb-2 mt-8 font-primary text-lg font-semibold text-gray-900 dark:text-white">Features</h2>
+                  <ul className="max-w-md space-y-1 font-secondary text-gray-500 list-disc list-inside dark:text-gray-400">
                     <li>Dimension: {data?.attributes?.dimension}</li>
                     <li>At least one lowercase character</li>
                     <li>Inclusion of at least one special character</li>
@@ -189,7 +189,7 @@ const Product = () => {
 
                       <div className="flex items-center gap-1">
                         <button type="button" onClick={() => setQuantity(prev => prev === 1 ? 1 : prev - 1)} className="w-10 h-10 leading-10 text-lg text-gray-800 transition hover:opacity-75">-</button>
-                        <input type="number" id="Quantity" value={quantity} readOnly className="h-10 w-16 font-fredoka rounded border-gray-200 text-center [-moz-appearance:_textfield] sm:text-sm [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none" />
+                        <input type="number" id="Quantity" value={quantity} readOnly className="h-10 w-16 font-secondary rounded border-gray-200 text-center [-moz-appearance:_textfield] sm:text-sm [&::-webkit-outer-spin-button]:m-0 [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:m-0 [&::-webkit-inner-spin-button]:appearance-none" />
                         <button type="button" onClick={() => setQuantity(prev => prev + 1)} className="w-10 h-10 leading-10 text-gray-800 text-lg transition hover:opacity-75">+</button>
                       </div>
                     </div>
@@ -208,11 +208,11 @@ const Product = () => {
                             img: data.attributes.image.data.attributes.url,
                             quantity,
                           }))}
-                            className="relative font-dynaPuff">
+                            className="relative font-primary">
                             Add to cart
                           </span>
                         ) : (
-                          <span className="relative font-dynaPuff">Out of stock</span>
+                          <span className="relative font-primary">Out of stock</span>
                         )}
                       </span>
                       <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
@@ -220,16 +220,16 @@ const Product = () => {
                   </div>
 
                   <ul className="mt-8 space-y-2">
-                    <li className="flex font-fredoka items-center text-left text-sm font-medium text-gray-600">
+                    <li className="flex font-secondary items-center text-left text-sm font-medium text-gray-600">
                       <HiOutlineGlobe className="mr-2 block h-5 w-5 align-middle text-gray-500" />
                       Free shipping worldwide
                     </li>
 
-                    <li className="flex font-fredoka items-center text-left text-sm font-medium text-gray-600">
+                    <li className="flex font-secondary items-center text-left text-sm font-medium text-gray-600">
                       <HiOutlineCreditCard className="mr-2 block h-5 w-5 align-middle text-gray-500" />
                       100% Secure payments
                     </li>
-                    <li className="flex font-fredoka items-center text-left text-sm font-medium text-gray-600">
+                    <li className="flex font-secondary items-center text-left text-sm font-medium text-gray-600">
                       <HiOutlineUser className="mr-2 block h-5 w-5 align-middle text-gray-500" />
                       Made by professionals
                     </li>
@@ -239,7 +239,7 @@ const Product = () => {
                 <div className="lg:col-span-3">
                   <div className="border-b border-gray-300">
                     <nav className="flex gap-4">
-                      <a href="/" title="" className="border-b-2 font-dynaPuff border-gray-900 py-4 text-sm font-medium text-gray-900 hover:border-gray-400 hover:text-gray-800"> Description </a>
+                      <a href="/" title="" className="border-b-2 font-primary border-gray-900 py-4 text-sm font-medium text-gray-900 hover:border-gray-400 hover:text-gray-800"> Description </a>
 
                       {/* <a href="/" title="" className="inline-flex items-center border-b-2 border-transparent py-4 text-sm font-medium text-gray-600">
                         Reviews
@@ -248,7 +248,7 @@ const Product = () => {
                     </nav>
                   </div>
 
-                  <div className="mt-8 font-fredoka flow-root sm:mt-8"><ReactMarkdown className="prose lg:prose-lg">{data?.attributes?.description}</ReactMarkdown></div>
+                  <div className="mt-8 font-secondary flow-root sm:mt-8"><ReactMarkdown className="prose lg:prose-lg">{data?.attributes?.description}</ReactMarkdown></div>
                 </div>
               </div>
             </div>

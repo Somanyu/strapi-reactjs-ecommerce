@@ -11,7 +11,7 @@ const Policy = () => {
             <section className="md:py-10 py-20 bg-red-500">
                 <div className="p-8 md:p-12 lg:px-16 lg:py-24">
                     <div className="mx-auto max-w-lg text-center">
-                        <h2 className="font-dynaPuff text-2xl font-bold text-gray-100 md:text-3xl">
+                        <h2 className="font-primary text-2xl font-bold text-gray-100 md:text-3xl">
                             Our Policy & Terms and Conditions
                         </h2>
 

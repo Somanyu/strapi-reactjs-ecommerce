@@ -60,8 +60,8 @@ const Cart = ({ onClose }) => {
                     ? (
                         <>
                             <img className="h-auto max-w-full" src="/images/empty-shopping-bag.png" alt="No product" />
-                            <h4 className='text-xl font-semibold dark:text-white font-dynaPuff text-center'>Empty Cart</h4>
-                            <p className="my-4 text-lg text-gray-500 font-fredoka text-center">Explore Exciting Products and Fill it Up!</p>
+                            <h4 className='text-xl font-semibold dark:text-white font-primary text-center'>Empty Cart</h4>
+                            <p className="my-4 text-lg text-gray-500 font-secondary text-center">Explore Exciting Products and Fill it Up!</p>
                         </>
                     )
                     : (

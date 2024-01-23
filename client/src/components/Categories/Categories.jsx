@@ -13,13 +13,13 @@ const Categories = () => {
             <section className="py-10 sm:py-16 lg:py-24">
                 <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
                     <div className="text-center">
-                        <h2 className="text-3xl font-bold leading-tight font-dynaPuff text-[#1186F1] sm:text-4xl lg:text-5xl">
+                        <h2 className="text-3xl font-bold leading-tight font-primary text-[#1186F1] sm:text-4xl lg:text-5xl">
                             <span className="relative inline-block">
                                 <PiConfettiDuotone className="absolute -top-5 left-3 z-0 hidden w-32 -mt-8 -ml-20 text-red-500 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block" />
                             </span>
                             Get full access to Celebration
                         </h2>
-                        <p className="mt-4 font-fredoka text-2xl font-medium">130+ Hand Crafted Stickers</p>
+                        <p className="mt-4 font-secondary text-2xl font-medium">130+ Hand Crafted Stickers</p>
                     </div>
                 </div>
             </section>

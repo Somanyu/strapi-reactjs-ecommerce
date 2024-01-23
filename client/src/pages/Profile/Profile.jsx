@@ -34,14 +34,14 @@ const Profile = () => {
         <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <div className="flex flex-col items-center pt-5 pb-10">
             <img className="w-24 h-24 mb-3 rounded-full shadow-lg" src={`https://api.dicebear.com/7.x/fun-emoji/svg?seed=${user.username}`} alt="Bonnie" />
-            <h5 className="mb-1 text-2xl font-medium font-dynaPuff text-gray-900 dark:text-white">{user.username}</h5>
-            <span className="text-base text-gray-500 font-fredoka dark:text-gray-400">{user.email}</span>
+            <h5 className="mb-1 text-2xl font-medium font-primary text-gray-900 dark:text-white">{user.username}</h5>
+            <span className="text-base text-gray-500 font-secondary dark:text-gray-400">{user.email}</span>
             <div className="flex mt-4 space-x-3 md:mt-6">
               <Link to="/logout" className="mt-6 relative inline-block text-base group">
                 <span className="relative z-10 block px-3 py-3 overflow-hidden font-medium leading-tight text-red-800 transition-colors duration-300 ease-out border-2 border-red-900 rounded-lg group-hover:text-white">
                   <span className="absolute inset-0 w-full h-full px-3 py-3 rounded-lg bg-red-50"></span>
                   <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-red-900 group-hover:-rotate-180 ease"></span>
-                  <span className="relative font-dynaPuff">Logout</span>
+                  <span className="relative font-primary">Logout</span>
                 </span>
                 <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-red-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
               </Link>
@@ -49,7 +49,7 @@ const Profile = () => {
                 <span className="relative z-10 block px-3 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
                   <span className="absolute inset-0 w-full h-full px-3 py-3 rounded-lg bg-gray-50"></span>
                   <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-                  <span className="relative font-dynaPuff">Contact us</span>
+                  <span className="relative font-primary">Contact us</span>
                 </span>
                 <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
               </a>

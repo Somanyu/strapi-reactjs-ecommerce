@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        dynaPuff: ['DynaPuff', ...defaultTheme.fontFamily.sans],
-        fredoka: ['Fredoka', ...defaultTheme.fontFamily.sans],
+        secondary: ['MontserratBold', ...defaultTheme.fontFamily.sans],
+        primary: ['Basketball', ...defaultTheme.fontFamily.sans],
       }
     },
   },

@@ -10,12 +10,12 @@ const Footer = () => {
 
   return (
 
-    <div className="bg-[#272136]">
+    <div className="bg-[#FFD306]">
       <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid row-gap-10 mb-8 lg:grid-cols-6">
           <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
             <div>
-              <p className="font-medium font-dynaPuff tracking-wide text-[#E2A246]">Category</p>
+              <p className="font-medium font-primary tracking-wide text-black">Category</p>
               <ul className="mt-2 space-y-2">
                 {error ?
                   <>
@@ -32,7 +32,7 @@ const Footer = () => {
                     : data?.map(item =>
                     (
                       <li key={item.id}>
-                        <Link to={`/products/${item.id}`} className="text-[#E2A246]/60 font-fredoka transition-colors duration-300 hover:text-purple-200">{item.attributes.title}</Link>
+                        <Link to={`/products/${item.id}`} className="text-[#000000]/60 font-secondary transition-colors duration-300 hover:text-purple-200">{item.attributes.title}</Link>
                       </li>
                     ))
                 }
@@ -42,8 +42,8 @@ const Footer = () => {
 
 
             <div>
-              <p className="font-medium font-dynaPuff tracking-wide text-[#E2A246]">Business</p>
-              <ul className="mt-2 font-fredoka text-[#E2A246]/60 space-y-2">
+              <p className="font-medium font-primary tracking-wide text-black">Business</p>
+              <ul className="mt-2 font-secondary text-[#000000]/60 space-y-2">
                 <li>
                   <a href="/about" className="transition-colors duration-300 hover:text-purple-200">About</a>
                 </li>
@@ -57,14 +57,22 @@ const Footer = () => {
             </div>
           </div>
           <div className="md:max-w-md lg:col-span-2">
-            <span className="text-base font-medium font-dynaPuff text-[#E2A246] tracking-wide">Subscribe for updates</span>
+            <span className="text-base font-medium font-primary text-black tracking-wide">Subscribe for updates</span>
             <form className="flex flex-col mt-4 md:flex-row">
-              <input placeholder="Your email" required type="text" className="flex-grow font-fredoka w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-purple-400 focus:outline-none focus:shadow-outline" />
-              <button type="submit" className="inline-flex font-dynaPuff items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-[#DA6048] hover:bg-[#E2A246]/80 focus:shadow-outline focus:outline-none">
+              <input placeholder="Your email" required type="text" className="flex-grow font-secondary w-full h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-purple-400 focus:outline-none focus:shadow-outline" />
+              {/* <button type="submit" className="inline-flex font-primary items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-[#DA6048] hover:bg-[#E2A246]/80 focus:shadow-outline focus:outline-none">
                 Subscribe
-              </button>
+              </button> */}
+              <Link to={'/'} className="relative inline-flex items-center justify-center text-base group">
+                <span className="relative z-10 block px-3 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+                  <span className="absolute inset-0 w-full h-full px-3 py-3 rounded-lg bg-gray-50"></span>
+                  <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                  <span className="relative font-primary">Subscribe</span>
+                </span>
+                <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
+              </Link>
             </form>
-            <p className="mt-4 text-sm text-gray-500 font-fredoka">
+            <p className="mt-4 text-sm text-gray-500 font-secondary">
               Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
               spare ribs salami.
             </p>

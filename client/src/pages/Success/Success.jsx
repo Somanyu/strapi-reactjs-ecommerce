@@ -56,18 +56,18 @@ const Success = () => {
                     <div>
                         <div className="max-w-2xl mx-auto py-16 px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 lg:py-32 lg:grid lg:grid-cols-2 lg:gap-x-8 xl:gap-x-24">
                             <div className="lg:col-start-2">
-                                <h1 className="text-sm font-fredoka font-medium text-[#EAAC53]">Order ID #{order?.id}</h1>
-                                <p className="mt-2 font-dynaPuff text-4xl font-extrabold tracking-tight text-[#DD6855] sm:text-5xl">
+                                <h1 className="text-sm font-secondary font-medium text-[#EAAC53]">Order ID #{order?.id}</h1>
+                                <p className="mt-2 font-primary text-4xl font-extrabold tracking-tight text-[#DD6855] sm:text-5xl">
                                     Thanks for ordering
                                 </p>
-                                <p className="mt-2 font-fredoka text-base text-[#EAAC53]">
+                                <p className="mt-2 font-secondary text-base text-[#EAAC53]">
                                     We appreciate your order, we're currently processing it. So hang tight and we'll send you confirmation
                                     very soon!
                                 </p>
 
                                 <dl className="mt-16 text-sm font-medium">
-                                    <dt className="text-gray-900 font-fredoka">Tracking number</dt>
-                                    <dd className="mt-2 font-fredoka text-[#DD6855]">{order?.tracking_id}</dd>
+                                    <dt className="text-gray-900 font-secondary">Tracking number</dt>
+                                    <dd className="mt-2 font-secondary text-[#DD6855]">{order?.tracking_id}</dd>
                                 </dl>
 
                                 <ul className="mt-6 text-sm font-medium text-gray-500 border-t border-gray-200 divide-y divide-gray-200">
@@ -79,25 +79,25 @@ const Success = () => {
                                                 className="flex-none w-24 h-24 bg-gray-100 rounded-md object-center object-cover"
                                             />
                                             <div className="flex-auto space-y-1">
-                                                <h3 className="text-gray-900 font-dynaPuff">
+                                                <h3 className="text-gray-900 font-primary">
                                                     <Link to={`/product/${product?.id}`}>{product.title}</Link>
                                                 </h3>
-                                                <p className='font-fredoka'>{product.description?.substring(0, 50)} ...</p>
-                                                <p className='font-fredoka'>Quantity: <span className='text-black'>{order.order_metadata[index].quantity}</span></p>
+                                                <p className='font-secondary'>{product.description?.substring(0, 50)} ...</p>
+                                                <p className='font-secondary'>Quantity: <span className='text-black'>{order.order_metadata[index].quantity}</span></p>
                                             </div>
-                                            <p className="flex-none font-fredoka text-lg font-medium text-gray-900">${product.price}</p>
+                                            <p className="flex-none font-secondary text-lg font-medium text-gray-900">${product.price}</p>
                                         </li>
                                     ))}
                                 </ul>
 
                                 <dl className="text-sm font-medium text-gray-500 space-y-6 border-t border-gray-200 pt-6">
-                                    <div className="flex font-fredoka justify-between">
+                                    <div className="flex font-secondary justify-between">
                                         <dt>Subtotal</dt>
                                         <dd className="text-gray-900">${order?.total}</dd>
                                     </div>
 
                                     <div className="flex justify-between">
-                                        <dt className='font-fredoka'>Shipping</dt>
+                                        <dt className='font-secondary'>Shipping</dt>
                                         <dd className="text-gray-900">
                                             <img className='w-10 h-10' src="/images/free.webp" alt="Free delivery" />
                                         </dd>
@@ -105,15 +105,15 @@ const Success = () => {
 
 
                                     <div className="flex items-center justify-between border-t border-gray-200 text-gray-900 pt-6">
-                                        <dt className="text-base font-fredoka">Total</dt>
-                                        <dd className="text-lg font-fredoka">${order?.total}</dd>
+                                        <dt className="text-base font-secondary">Total</dt>
+                                        <dd className="text-lg font-secondary">${order?.total}</dd>
                                     </div>
                                 </dl>
 
                                 <dl className="mt-16 grid grid-cols-2 gap-x-4 text-sm text-gray-600">
                                     <div>
-                                        <dt className="font-medium font-dynaPuff text-gray-900">Shipping Address</dt>
-                                        <dd className="mt-2 font-fredoka">
+                                        <dt className="font-medium font-primary text-gray-900">Shipping Address</dt>
+                                        <dd className="mt-2 font-secondary">
                                             <address className="not-italic">
                                                 <span className="block">{order?.shipping_address?.name}</span>
                                                 <span className="block">{order?.shipping_address?.address?.line1}</span>
@@ -126,7 +126,7 @@ const Success = () => {
                                 </dl>
 
                                 <div className="mt-16 border-t border-gray-200 py-6 text-right">
-                                    <a href="/" className="text-sm font-fredoka font-medium text-[#DD6855] hover:text-[#DD6855]/80">
+                                    <a href="/" className="text-sm font-secondary font-medium text-[#DD6855] hover:text-[#DD6855]/80">
                                         Continue Shopping<span aria-hidden="true"> &rarr;</span>
                                     </a>
                                 </div>

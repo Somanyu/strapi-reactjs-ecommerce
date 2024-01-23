@@ -38,10 +38,10 @@ const Wishlist = () => {
       <div className="bg-white">
         <div className="max-w-3xl mx-auto px-4 py-16 sm:px-6 sm:py-24">
           <div className="max-w-xl">
-            <h1 id="your-orders-heading" className="text-3xl font-dynaPuff font-extrabold tracking-tight text-gray-900">
+            <h1 id="your-orders-heading" className="text-3xl font-primary font-extrabold tracking-tight text-gray-900">
               Your Wishlist
             </h1>
-            <p className="mt-2 font-fredoka text-sm text-gray-500">
+            <p className="mt-2 font-secondary text-sm text-gray-500">
               Check the status of recent orders, manage returns, and discover similar products.
             </p>
           </div>
@@ -50,7 +50,7 @@ const Wishlist = () => {
             {wishlist?.length === 0 ? <>
               <Link to="/" className="relative block w-full border-2 border-gray-300 border-dashed rounded-lg p-12 text-center hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 <img src="/images/tutti-payment-processed-for-goods-using-a-debit-card-and-phone-1.png" alt="Empty cart" className="mx-auto h-52 w-50 text-gray-400" />
-                <span className="mt-2 block text-lg font-dynaPuff font-medium text-gray-900">Explore products. Start shopping</span>
+                <span className="mt-2 block text-lg font-primary font-medium text-gray-900">Explore products. Start shopping</span>
               </Link>
             </> : wishlist?.map((product, index) => (
               <section key={index} aria-labelledby={`${index}-heading`}>
@@ -62,10 +62,10 @@ const Wishlist = () => {
                         className="flex-none w-20 h-20 rounded-md object-center object-cover sm:w-48 sm:h-48"
                       />
                       <div className="pt-1.5 min-w-0 flex-1 sm:pt-0">
-                        <h3 className="text-xl font-dynaPuff font-medium text-gray-900">
+                        <h3 className="text-xl font-primary font-medium text-gray-900">
                           <Link to={`/product/${product.product?.id}`}>{product.product?.title}</Link>
                         </h3>
-                        <p className="hidden text-gray-500 font-fredoka sm:block sm:mt-2">{product.product?.desc?.substring(0, 70)} ...</p>
+                        <p className="hidden text-gray-500 font-secondary sm:block sm:mt-2">{product.product?.desc?.substring(0, 70)} ...</p>
                         {/* <p className="text-sm text-gray-500 truncate">
                           <span>{product.product?.color}</span>{' '}
                           <span className="mx-1 text-gray-400" aria-hidden="true">
@@ -73,7 +73,7 @@ const Wishlist = () => {
                           </span>{' '}
                           <span>{product.product?.size}</span>
                         </p> */}
-                        <p className="mt-1 font-fredoka font-medium text-gray-900">$ {product.product?.price}</p>
+                        <p className="mt-1 font-secondary font-medium text-gray-900">$ {product.product?.price}</p>
                       </div>
                     </div>
                     <div className="mt-6 space-y-4 sm:mt-0 sm:ml-6 sm:flex-none sm:w-40">
@@ -84,7 +84,7 @@ const Wishlist = () => {
                         price: product?.product?.price,
                         img: product?.product?.img,
                         quantity: 1,
-                      }))} type="button" className="w-full flex font-dynaPuff items-center justify-center bg-[#1F7FF1] py-2 px-2.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:bg-[#4EADFA] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-full sm:flex-grow-0">
+                      }))} type="button" className="w-full flex font-primary items-center justify-center bg-[#1F7FF1] py-2 px-2.5 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:bg-[#4EADFA] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-full sm:flex-grow-0">
                         Add to cart
                       </button>
                       <button onClick={() => {
@@ -97,7 +97,7 @@ const Wishlist = () => {
                             window.location.reload();
                             toast.success('Product removed from wishlist');
                           })
-                      }} type="button" className="w-full font-dynaPuff flex items-center justify-center bg-white py-2 px-2.5 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-full sm:flex-grow-0">
+                      }} type="button" className="w-full font-primary flex items-center justify-center bg-white py-2 px-2.5 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-full sm:flex-grow-0">
                         Remove
                       </button>
                     </div>
@@ -111,8 +111,8 @@ const Wishlist = () => {
 
       {/* <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
         <header>
-          <h2 className="text-xl font-dynaPuff font-bold text-gray-900 sm:text-3xl">Wishlist Collection</h2>
-          <p className="mt-4 font-fredoka max-w-md text-gray-500">
+          <h2 className="text-xl font-primary font-bold text-gray-900 sm:text-3xl">Wishlist Collection</h2>
+          <p className="mt-4 font-secondary max-w-md text-gray-500">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
             presenting cumae iure dicta incident est ipsam, officia dolor fugit
             natus?

@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "MontserratBold";
+    src: url("../public/fonts/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Papercuts";
+    src: url("../public/fonts/papercuts-2.ttf");
+}
+
+@font-face {
+    font-family: "Basketball";
+    src: url("../public/fonts/Basketball.otf");
+}

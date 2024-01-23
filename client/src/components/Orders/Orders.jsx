@@ -39,8 +39,8 @@ const Orders = ({ userId }) => {
       <div className="py-16 sm:py-5">
         <div className="max-w-7xl mx-auto sm:px-2 lg:px-8">
           <div className="max-w-2xl mx-auto px-4 lg:max-w-4xl lg:px-0">
-            <h1 className="text-2xl font-extrabold tracking-tight font-dynaPuff text-[#2BAA55] sm:text-3xl">Order history</h1>
-            <p className="mt-2 text-sm font-fredoka text-gray-500">
+            <h1 className="text-2xl font-extrabold tracking-tight font-primary text-[#2BAA55] sm:text-3xl">Order history</h1>
+            <p className="mt-2 text-sm font-secondary text-gray-500">
               Check the status of recent orders, manage returns, and discover similar products.
             </p>
           </div>
@@ -53,7 +53,7 @@ const Orders = ({ userId }) => {
               {orders?.length === 0 ? <>
                 <Link to="/" className="relative block w-full border-2 border-gray-300 border-dashed rounded-lg p-12 text-center hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                   <img src="/images/tutti-payment-processed-for-goods-using-a-debit-card-and-phone-1.png" alt="Empty cart" className="mx-auto h-52 w-50 text-gray-400" />
-                  <span className="mt-2 block text-lg font-dynaPuff font-medium text-gray-900">Explore products. Start shopping</span>
+                  <span className="mt-2 block text-lg font-primary font-medium text-gray-900">Explore products. Start shopping</span>
                 </Link>
               </> : orders?.map((order) => (
                 <div key={order.id} className="bg-white border-t border-b border-gray-200 shadow-sm sm:rounded-lg sm:border">
@@ -65,12 +65,12 @@ const Orders = ({ userId }) => {
                   <div className="flex items-center p-4 border-b border-gray-200 sm:p-6 sm:grid sm:grid-cols-4 sm:gap-x-6">
                     <dl className="flex-1 grid grid-cols-2 gap-x-6 text-sm sm:col-span-3 sm:grid-cols-3 lg:col-span-2">
                       <div className="">
-                        <dt className="font-medium font-dynaPuff text-[#2BAA55]">Order number</dt>
-                        <dd className="mt-1 font-fredoka text-gray-500">{order.id}</dd>
+                        <dt className="font-medium font-primary text-[#2BAA55]">Order number</dt>
+                        <dd className="mt-1 font-secondary text-gray-500">{order.id}</dd>
                       </div>
                       <div className="hidden sm:block">
-                        <dt className="font-medium font-dynaPuff text-[#2BAA55]">Date placed</dt>
-                        <dd className="mt-1 font-fredoka text-gray-500">
+                        <dt className="font-medium font-primary text-[#2BAA55]">Date placed</dt>
+                        <dd className="mt-1 font-secondary text-gray-500">
                           <time dateTime={order?.createdAt}>    {new Date(order?.createdAt).toLocaleDateString(undefined, {
                             year: 'numeric',
                             month: '2-digit',
@@ -79,8 +79,8 @@ const Orders = ({ userId }) => {
                         </dd>
                       </div>
                       <div>
-                        <dt className="font-medium font-dynaPuff text-[#2BAA55]">Total amount</dt>
-                        <dd className="mt-1 font-medium font-fredoka text-gray-900">${order?.total}</dd>
+                        <dt className="font-medium font-primary text-[#2BAA55]">Total amount</dt>
+                        <dd className="mt-1 font-medium font-secondary text-gray-900">${order?.total}</dd>
                       </div>
                     </dl>
 
@@ -99,14 +99,14 @@ const Orders = ({ userId }) => {
                               <>
                                 <Menu.Item>
                                   {({ active }) => (
-                                    <a href={`/success?session_id=${order?.stripe_checkout_session}`} className={classNames(active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'block px-4 cursor-pointer py-2 text-sm font-dynaPuff')}>View Order</a>
+                                    <a href={`/success?session_id=${order?.stripe_checkout_session}`} className={classNames(active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'block px-4 cursor-pointer py-2 text-sm font-primary')}>View Order</a>
                                   )}
                                 </Menu.Item>
                               </> :
                               <>
                                 <Menu.Item>
                                   {({ active }) => (
-                                    <button className={classNames(active ? 'bg-red-400 text-gray-300' : 'text-red-600', 'block px-4 py-2 text-sm font-dynaPuff')}>Order Cancelled</button>
+                                    <button className={classNames(active ? 'bg-red-400 text-gray-300' : 'text-red-600', 'block px-4 py-2 text-sm font-primary')}>Order Cancelled</button>
                                   )}
                                 </Menu.Item>
 
@@ -114,7 +114,7 @@ const Orders = ({ userId }) => {
                             {order?.status === 'Paid' &&
                               <Menu.Item>
                                 {({ active }) => (
-                                  <a href={order?.hosted_invoice_url} target="_blank" className={classNames(active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'block px-4 py-2 font-dynaPuff text-sm')} rel="noreferrer">Invoice</a>
+                                  <a href={order?.hosted_invoice_url} target="_blank" className={classNames(active ? 'bg-gray-100 text-gray-900' : 'text-gray-700', 'block px-4 py-2 font-primary text-sm')} rel="noreferrer">Invoice</a>
                                 )}
                               </Menu.Item>
                             }
@@ -127,25 +127,25 @@ const Orders = ({ userId }) => {
                     <div className="hidden lg:col-span-2 lg:flex lg:items-center lg:justify-end lg:space-x-4">
                       {order?.status === 'Unpaid' ? (
                         <>
-                          <button className="flex font-dynaPuff items-center justify-center bg-red-500 py-2 px-2.5 rounded-md shadow-sm text-sm font-medium text-gray-100 hover:text-red-500 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" disabled>
+                          <button className="flex font-primary items-center justify-center bg-red-500 py-2 px-2.5 rounded-md shadow-sm text-sm font-medium text-gray-100 hover:text-red-500 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" disabled>
                             <span>Order cancelled</span>
                             <span className="sr-only">{order.id}</span>
                           </button>
                         </>
                       ) : (
                         <>
-                          <a href={`/success?session_id=${order?.stripe_checkout_session}`} className="flex font-dynaPuff items-center justify-center bg-white py-2 px-2.5 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                          <a href={`/success?session_id=${order?.stripe_checkout_session}`} className="flex font-primary items-center justify-center bg-white py-2 px-2.5 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span>View Order</span>
                             <span className="sr-only">{order.id}</span>
                           </a>
                         </>
                       )}
-                      {/* <a href={`/success?session_id=${order.stripe_checkout_session}`} className="flex font-dynaPuff items-center justify-center bg-white py-2 px-2.5 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      {/* <a href={`/success?session_id=${order.stripe_checkout_session}`} className="flex font-primary items-center justify-center bg-white py-2 px-2.5 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                         <span>View Order</span>
                         <span className="sr-only">{order.number}</span>
                       </a> */}
                       {order?.status === 'Paid' &&
-                        <a href={order?.hosted_invoice_url} target="_blank" className="flex items-center font-dynaPuff justify-center bg-white py-2 px-2.5 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" rel="noreferrer">
+                        <a href={order?.hosted_invoice_url} target="_blank" className="flex items-center font-primary justify-center bg-white py-2 px-2.5 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" rel="noreferrer">
                           <span>View Invoice</span>
                           <span className="sr-only">for order {order.number}</span>
                         </a>
@@ -169,18 +169,18 @@ const Orders = ({ userId }) => {
                           <div className="flex-1 ml-6 text-sm">
                             <div className="font-medium text-gray-900 sm:flex sm:justify-between">
                               <div className="0">
-                                <h5 className='font-dynaPuff text-xl'>{product.title}</h5>
-                                <p className='font-fredoka text-base'>Quantity: <span className='text-black'>{product.quantity}</span></p>
+                                <h5 className='font-primary text-xl'>{product.title}</h5>
+                                <p className='font-secondary text-base'>Quantity: <span className='text-black'>{product.quantity}</span></p>
                               </div>
-                              <p className="mt-2 text-xl sm:mt-0 font-dynaPuff">${product.price}</p>
+                              <p className="mt-2 text-xl sm:mt-0 font-primary">${product.price}</p>
                             </div>
-                            <p className="hidden text-gray-500 font-fredoka sm:block sm:mt-2">{product.desc?.substring(0, 250)} ...</p>
-                            {/* <p className='font-fredoka'>Quantity: <span className='text-black'>{product.quantity}</span></p> */}
+                            <p className="hidden text-gray-500 font-secondary sm:block sm:mt-2">{product.desc?.substring(0, 250)} ...</p>
+                            {/* <p className='font-secondary'>Quantity: <span className='text-black'>{product.quantity}</span></p> */}
                           </div>
                         </div>
 
                         <div className="mt-6 sm:flex sm:justify-between">
-                          <div className="flex items-center font-fredoka">
+                          <div className="flex items-center font-secondary">
                             {order?.status === 'Paid' ? (
                               <>
                                 {
@@ -241,7 +241,7 @@ const Orders = ({ userId }) => {
                           </div>
                           <div className="mt-6 border-t border-gray-200 pt-4 flex items-center space-x-4 divide-x divide-gray-200 text-sm font-medium sm:mt-0 sm:ml-4 sm:border-none sm:pt-0">
                             <div className="flex-1 flex justify-center">
-                              <Link className="text-indigo-600 font-fredoka whitespace-nowrap hover:text-indigo-500" to={`/product/${product.id}`}>View product</Link>
+                              <Link className="text-indigo-600 font-secondary whitespace-nowrap hover:text-indigo-500" to={`/product/${product.id}`}>View product</Link>
                             </div>
                           </div>
                         </div>
