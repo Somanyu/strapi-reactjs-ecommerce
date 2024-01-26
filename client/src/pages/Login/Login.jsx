@@ -42,7 +42,7 @@ const Login = () => {
     return (
         <div className='bg-white shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 pb-20 pt-32 w-full mx-auto dark:bg-gray-900'>
 
-            <div className="w-full max-w-sm p-4 m-auto border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <div className="w-full max-w-sm p-4 m-auto border-2 border-black shadow-[rgba(0,0,0)_1.95px_1.95px_2.6px] rounded-lg sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
                 <div className="space-y-6">
                     <h5 className="text-xl font-medium font-primary text-gray-900 dark:text-white">Sign in</h5>
                     <div>
@@ -68,7 +68,18 @@ const Login = () => {
                         </div> */}
                         <a href="/" className="ml-auto font-secondary text-sm text-blue-700 hover:underline dark:text-blue-500">Lost Password?</a>
                     </div>
-                    <button type="submit" onClick={handleLogin} className="w-full font-primary text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button>
+
+                    {/* <button type="submit" onClick={handleLogin} className="w-full font-primary text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login to your account</button> */}
+
+                    <button onClick={handleLogin} type="submit" className="relative inline-block text-base group w-full">
+                        <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 font-primary transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
+                            <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
+                            <span className="absolute left-0 h-48 -ml-2 transition-all w-[104%] duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
+                            <span className="relative">Login to your account</span>
+                        </span>
+                        <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
+                    </button>
+
                     <div className="text-sm font-secondary font-medium text-gray-500 dark:text-gray-300">
                         Not registered? <Link to="/register" className="text-blue-700 hover:underline dark:text-blue-500">Create account</Link>
                     </div>

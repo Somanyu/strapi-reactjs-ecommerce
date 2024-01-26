@@ -32,7 +32,7 @@ const Footer = () => {
                     : data?.map(item =>
                     (
                       <li key={item.id}>
-                        <Link to={`/products/${item.id}`} className="text-[#000000]/60 font-secondary transition-colors duration-300 hover:text-purple-200">{item.attributes.title}</Link>
+                        <Link to={`/products/${item.id}`} className="text-[#000000] font-secondary transition-colors duration-300 hover:text-purple-200">{item.attributes.title}</Link>
                       </li>
                     ))
                 }
@@ -43,15 +43,15 @@ const Footer = () => {
 
             <div>
               <p className="font-medium font-primary tracking-wide text-black">Business</p>
-              <ul className="mt-2 font-secondary text-[#000000]/60 space-y-2">
+              <ul className="mt-2 font-secondary text-[#000000] space-y-2">
                 <li>
-                  <a href="/about" className="transition-colors duration-300 hover:text-purple-200">About</a>
+                  <a href="/about" className="transition-colors duration-300 hover:text-gray-700">About</a>
                 </li>
                 <li>
-                  <a href="/policy" className="transition-colors duration-300 hover:text-purple-200">Policy</a>
+                  <a href="/policy" className="transition-colors duration-300 hover:text-gray-700">Policy</a>
                 </li>
                 <li>
-                  <Link to="/contact" className="transition-colors duration-300 hover:text-purple-200">Contact</Link>
+                  <Link to="/contact" className="transition-colors duration-300 hover:text-gray-700">Contact</Link>
                 </li>
               </ul>
             </div>
