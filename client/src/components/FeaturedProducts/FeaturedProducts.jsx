@@ -21,8 +21,8 @@ const FeaturedProducts = ({ type, categories }) => {
                         <div className="grid p-6 bg-[#2E64A1] rounded place-content-center sm:p-8">
                             <div className="max-w-md mx-auto text-center lg:text-left">
                                 <header>
-                                    <h2 className="text-xl font-bold font-primary text-[#F6D1D1] sm:text-3xl">Shop {capitalizeFirstLetter(type)} {categories}</h2>
-                                    <p className="mt-4 text-[#F6D1D1]/70 font-secondary">
+                                    <h2 className="text-xl font-bold font-primary text-white sm:text-3xl">Shop {capitalizeFirstLetter(type)} {categories}</h2>
+                                    <p className="mt-4 text-white font-secondary">
                                         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                         rerum quam amet provident nulla error!
                                     </p>

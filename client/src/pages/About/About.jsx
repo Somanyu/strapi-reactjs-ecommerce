@@ -7,7 +7,7 @@ const About = () => {
         <div>
             <div className="mb-2">
             <div className="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:mt-36">
-                <img className="mx-auto w-96" src="/images/logo.png" alt="" />
+                <img className="mx-auto w-96" src="/images/about-us.webp" alt="" />
             </div>
                 {/* <div className="bg-[#FDF3F2]">
                     <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-28">

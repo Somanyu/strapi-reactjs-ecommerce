@@ -41,7 +41,7 @@ const Contact = () => {
                         <div className="flex flex-col justify-between lg:py-5">
                             <div>
                                 <h2 className="text-3xl font-bold leading-tight font-primary text-black sm:text-4xl lg:leading-tight lg:text-5xl">It's time to build something exciting!</h2>
-                                <p className="max-w-xl mx-auto mt-4 text-base font-secondary leading-relaxed text-[#DB6048]/80">Amet minim mollie non desert ullage est sit alisa dolor do amet sint. Veldt officia consequent dais.</p>
+                                <p className="max-w-xl mx-auto mt-4 text-base font-secondary leading-relaxed text-black/80">Amet minim mollie non desert ullage est sit alisa dolor do amet sint. Veldt officia consequent dais.</p>
 
                                 {/* <img className="relative z-10 max-w-xs mx-auto -mb-16 md:hidden" src="https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/curve-line-mobile.svg" alt="" /> */}
 
@@ -50,10 +50,10 @@ const Contact = () => {
                         </div>
 
                         <div className="lg:pl-12">
-                            <div className="overflow-hidden bg-[#0091D4] border-2 border-black shadow-[rgba(0,0,0)_1.95px_1.95px_2.6px] rounded-md">
+                            <div className="overflow-hidden bg-white border-2 border-black shadow-[rgba(0,0,0)_1.95px_1.95px_2.6px] rounded-md">
                                 <div className="p-6 sm:p-10">
-                                    <h3 className="text-3xl font-primary font-semibold text-white">Need help? Get in touch.</h3>
-                                    <p className="mt-4 font-secondary text-base text-[#DB6048]/80">Amet minim mollie non desert ullage est sit alisa dolor do amet sint.</p>
+                                    <h3 className="text-3xl font-primary font-semibold text-black">Need help? Get in touch.</h3>
+                                    <p className="mt-4 font-secondary text-base text-black/80">Amet minim mollie non desert ullage est sit alisa dolor do amet sint.</p>
 
                                     <div className="mt-4">
                                         <div className="space-y-6">

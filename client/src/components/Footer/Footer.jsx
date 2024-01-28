@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="grid row-gap-10 mb-8 lg:grid-cols-6">
           <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
             <div>
-              <p className="font-medium font-primary tracking-wide text-black">Category</p>
+              <p className="font-medium font-primary tracking-wide text-xl text-black">Category</p>
               <ul className="mt-2 space-y-2">
                 {error ?
                   <>
@@ -42,7 +42,7 @@ const Footer = () => {
 
 
             <div>
-              <p className="font-medium font-primary tracking-wide text-black">Business</p>
+              <p className="font-medium font-primary tracking-wide text-xl text-black">Business</p>
               <ul className="mt-2 font-secondary text-[#000000] space-y-2">
                 <li>
                   <a href="/about" className="transition-colors duration-300 hover:text-gray-700">About</a>
@@ -72,7 +72,7 @@ const Footer = () => {
                 <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
               </Link>
             </form>
-            <p className="mt-4 text-sm text-gray-500 font-secondary">
+            <p className="mt-4 text-sm text-black font-secondary">
               Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
               spare ribs salami.
             </p>
